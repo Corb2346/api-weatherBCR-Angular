@@ -1,0 +1,63 @@
+
+     <body >
+
+        <div class="title-menu"> Bienvenido esta api trae información del clima introduce latitud y longitud o clave de tu pais 
+      
+           <p>  quieres saber tus coordenadas:  https://www.coordenadas-gps.com/ </p>
+      
+     <p>  quieres saber códigos de paises: http://utils.mucattu.com/iso_3166-1.html  </p> 
+    </div>
+  
+  
+  
+        <div class="finders-container"> 
+            
+            <form>
+                <input type="text" name="latitud" placeholder="Latitud">
+            </form>
+  
+            <form>
+                <input type="text" name="longitud" placeholder="Longitud">
+            </form>
+  
+            <form>
+                <input type="text" name="country" placeholder="pais">
+            </form>
+              
+            
+  
+        </div>
+  
+    <div class="main-container"> 
+  
+        <div class="info-city-container">
+  
+            {{weather[0].city_name}} - {{weather[0].country_code}}
+  
+        </div>
+  
+            <div class="weather-response">
+                   <div> temperatura: {{weather[0].app_temp}} ° </div> 
+    
+                <div> {{weather[0].weather.code}}</div>
+  
+                <div>{{weather[0].weather.description}}</div>
+  
+    </div>
+  
+  </div>
+  
+  
+  <div class="submenu-data"> 
+    
+        <div class="timezone-mas"> TimeZone:  {{weather[0].timezone}}</div>
+  
+        <div class="timesunset"> SunRise: {{weather[0].sunrise}} - SunSet: {{weather[0].sunset}} </div>
+  
+        <div class="radiation-levels"> Uv : {{weather[0].uv}} </div>
+  
+  
+  </div>
+  
+  
+  </body>
